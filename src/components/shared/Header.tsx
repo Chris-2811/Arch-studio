@@ -45,31 +45,43 @@ function Header() {
 
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="z-10 cursor-pointer md:hidden"
+          className="z-40 cursor-pointer md:hidden"
         >
           <img src={hamburger} alt="Open menu" />
         </div>
 
         {isOpen && (
-          <div className="md:hidden w-[343px] bg-grey-100 absolute right-0 top-[6rem] pl-12">
-            <nav className="">
-              <ul
-                role="list"
-                aria-label="primary-navigation"
-                className="flex flex-col gap-5 text-dark-blue text-[1.5rem] font-bold py-10"
-              >
-                <li className="leading-[1.25]">
-                  <NavLink to="/portfolio">Portfolio</NavLink>
-                </li>
-                <li className="leading-[1.25]">
-                  <NavLink to="/About Us">About Us</NavLink>
-                </li>
-                <li className="leading-[1.25]">
-                  <NavLink to="/Contact">Contact</NavLink>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <>
+            <div className="md:hidden w-[343px] bg-grey-100 absolute right-0 top-[6rem] z-30 pl-12">
+              <nav className="">
+                <ul
+                  role="list"
+                  aria-label="primary-navigation"
+                  className="flex flex-col gap-5 text-dark-blue text-[1.5rem] font-bold py-10"
+                >
+                  <li
+                    className="leading-[1.25]"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    <NavLink to="/portfolio">Portfolio</NavLink>
+                  </li>
+                  <li
+                    className="leading-[1.25]"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    <NavLink to="/about">About Us</NavLink>
+                  </li>
+                  <li
+                    className="leading-[1.25]"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    <NavLink to="/Contact">Contact</NavLink>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="fixed top-24 left-0 w-[100vw] h-full bg-black/50 z-20"></div>
+          </>
         )}
       </div>
     </header>

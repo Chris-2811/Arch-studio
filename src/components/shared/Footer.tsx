@@ -21,12 +21,12 @@ function Footer() {
           <div className="bg-black w-[120px] h-[120px] xl:w-[200px] xl:h-[200px] grid place-items-center absolute -translate-y-[50%] md:-translate-y-0 md:static">
             <img src={logo} alt="logo" className="w-16" />
           </div>
-          <div className="mt-[6.375rem] mb-8 md:mt-0 md:mb-0 md:bg-grey-100 md:h-[120px] xl:h-[200px] flex items-center justify-center w-[76vw] md:justify-start md:pl-10 lg:w-[644px] xxl:w-[784px]">
+          <div className="mt-[6.375rem] mb-8 md:mt-0 md:mb-0 md:bg-grey-100 md:h-[120px] xl:h-[200px] flex items-center justify-center w-[76vw] md:justify-start md:pl-10 xl:pl-[5.375rem] lg:w-[644px] xxl:w-[784px]">
             <nav>
               <ul
                 role="list"
                 aria-label="secondary-navigation"
-                className="flex flex-col  md:flex-row items-center gap-[2rem] text-grey-300 text-lg font-bold"
+                className="flex flex-col  md:flex-row items-center gap-[2rem] md:gap-[3.75rem] text-grey-300 text-lg font-bold"
               >
                 {navbarLinks.map((link, index) => {
                   const isActive = location === link.route;

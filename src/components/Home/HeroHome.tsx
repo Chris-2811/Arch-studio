@@ -7,7 +7,7 @@ function HeroHome() {
   return (
     <section className="md:myContainer">
       <div
-        className={`relative px-8 md:px-[3.6125rem] lg:px-[11.875rem] pt-[7.25rem] ${
+        className={`relative px-8 md:px-[3.6125rem] lg:px-[11.875rem] pt-[7.25rem] xxl:pt-[11rem] ${
           selectedNumber === 1
             ? 'bg-paramour-mobile md:bg-paramour-tablet lg:bg-paramour-desktop'
             : selectedNumber === 2
