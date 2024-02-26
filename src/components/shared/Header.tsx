@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import logo from '@/assets/logo.svg';
 import { NavLink } from 'react-router-dom';
 import hamburger from '@/assets/icons/icon-hamburger.svg';
@@ -8,6 +8,26 @@ import { navbarLinks } from '@/constants';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation().pathname;
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  function toggleModal(e: any) {
+    e.stopPropagation();
+
+    setIsOpen((prevState) => !prevState);
+  }
+
+  useEffect(() => {
+    function handleOutsideClick(e: any) {
+      if (modalRef.current && !modalRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
 
   return (
     <header className="py-8 md:py-[3.5rem]">
@@ -43,16 +63,16 @@ function Header() {
           </ul>
         </nav>
 
-        <div
-          onClick={() => setIsOpen(!isOpen)}
-          className="z-40 cursor-pointer md:hidden"
-        >
-          <img src={hamburger} alt="Open menu" />
+        <div onClick={toggleModal} className="z-40 cursor-pointer md:hidden">
+          <img src={hamburger} alt={isOpen ? 'close menu' : 'open menu'} />
         </div>
 
         {isOpen && (
           <>
-            <div className="md:hidden w-[343px] bg-grey-100 absolute right-0 top-[6rem] z-30 pl-12">
+            <div
+              ref={modalRef}
+              className="md:hidden w-[343px] bg-grey-100 absolute right-0 top-[6rem] z-30 pl-12"
+            >
               <nav className="">
                 <ul
                   role="list"
