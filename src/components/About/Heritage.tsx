@@ -1,4 +1,3 @@
-import React from 'react';
 import Rectangle from '../ui/Rectangle';
 import heritage from '@/assets/about/desktop/image-heritage.jpg';
 

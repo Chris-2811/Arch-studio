@@ -1,4 +1,3 @@
-import React from 'react';
 import Rectangle from '../ui/Rectangle';
 import welcomeImage from '@/assets/home/desktop/image-welcome.jpg';
 

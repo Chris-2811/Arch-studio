@@ -1,4 +1,3 @@
-import React from 'react';
 import Rectangle from '../ui/Rectangle';
 
 function HeroContact() {

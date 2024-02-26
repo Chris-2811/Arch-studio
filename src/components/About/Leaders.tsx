@@ -1,4 +1,3 @@
-import React from 'react';
 import jake from '@/assets/about/desktop/avatar-jake.jpg';
 import thompson from '@/assets/about/desktop/avatar-thompson.jpg';
 import jackson from '@/assets/about/desktop/avatar-jackson.jpg';

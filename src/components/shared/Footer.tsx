@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '@/assets/logo-light.svg';
 import Button from '../ui/Button';

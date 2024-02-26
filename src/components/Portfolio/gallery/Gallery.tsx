@@ -1,4 +1,3 @@
-import React from 'react';
 import { portfolioImages } from '@/constants';
 
 function Gallery() {

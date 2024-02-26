@@ -1,4 +1,3 @@
-import React from 'react';
 import Gallery from '@/components/Portfolio/gallery/Gallery';
 import { useEffect } from 'react';
 

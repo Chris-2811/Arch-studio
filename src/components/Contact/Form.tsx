@@ -1,6 +1,4 @@
-import React from 'react';
 import { useState } from 'react';
-import Button from '../ui/Button';
 import arrow from '@/assets/icons/icon-arrow.svg';
 
 function Form() {
@@ -9,15 +7,21 @@ function Form() {
     email: '',
     message: '',
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
+
+  interface Errors {
+    name?: string;
+    email?: string;
+    message?: string;
+  }
 
   function validateForm() {
     let isValid = true;
-    const newErrors = {};
+    const newErrors: Errors = {};
 
     if (!formData.name) {
-      let isValid = false;
+      isValid = false;
       newErrors.name = "can't be empty";
     } else {
       newErrors.name = '';
@@ -45,7 +49,7 @@ function Form() {
     return isValid;
   }
 
-  function handleSubmit(e: any) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
     if (validateForm()) {
@@ -60,7 +64,7 @@ function Form() {
     }
   }
 
-  function handleInputChange(e) {
+  function handleInputChange(e: any) {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,

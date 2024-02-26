@@ -1,4 +1,3 @@
-import React from 'react';
 import HeroContact from '@/components/Contact/HeroContact';
 import ContactDetails from '@/components/Contact/ContactDetails';
 import Form from '@/components/Contact/Form';

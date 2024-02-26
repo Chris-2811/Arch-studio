@@ -1,4 +1,3 @@
-import React from 'react';
 import HeroHome from '@/components/Home/HeroHome';
 import Welcome from '@/components/Home/Welcome';
 import Team from '@/components/Home/Team';

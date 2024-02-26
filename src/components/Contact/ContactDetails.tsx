@@ -1,4 +1,3 @@
-import React from 'react';
 import Rectangle from '../ui/Rectangle';
 import arrow from '@/assets/icons/icon-arrow-dark.svg';
 

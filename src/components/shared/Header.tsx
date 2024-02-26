@@ -2,7 +2,6 @@ import { useState } from 'react';
 import logo from '@/assets/logo.svg';
 import { NavLink } from 'react-router-dom';
 import hamburger from '@/assets/icons/icon-hamburger.svg';
-import close from '@/assets/icons/icon-close.svg';
 import { useLocation } from 'react-router-dom';
 import { navbarLinks } from '@/constants';
 
