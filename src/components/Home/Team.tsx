@@ -9,7 +9,9 @@ function Team() {
           <h2 className="text-white mb-6 md:mb-7 leading-[1.0833] md:leading-[0.8888]">
             Small team, big ideas
           </h2>
-          <Button to="/portfolio">About Us</Button>
+          <Button to="/portfolio" aria-label="See all projects">
+            About Us
+          </Button>
         </div>
       </div>
     </section>

@@ -22,7 +22,7 @@ function ContactDetails() {
               </div>
               <div className="flex items-center gap-6 mt-11 self-end mb-3">
                 <p className="text-dark-blue ">View on Map</p>
-                <img src={arrow} alt="arrow" />
+                <img src={arrow} alt="right arrow" />
               </div>
             </div>
             <div className="mt-10 md:flex justify-between xl:block xl:mt-0 xxl:w-350">
@@ -36,7 +36,7 @@ function ContactDetails() {
               </div>
               <div className="flex items-center gap-6 mt-11">
                 <p className="text-dark-blue ">View on Map</p>
-                <img src={arrow} alt="arrow" />
+                <img src={arrow} alt="right arrow" />
               </div>
             </div>
           </div>

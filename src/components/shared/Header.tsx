@@ -10,7 +10,7 @@ function Header() {
   const location = useLocation().pathname;
   const modalRef = useRef<HTMLDivElement | null>(null);
 
-  function toggleModal(e: any) {
+  function toggleModal(e: React.MouseEvent) {
     e.stopPropagation();
 
     setIsOpen((prevState) => !prevState);
@@ -63,9 +63,13 @@ function Header() {
           </ul>
         </nav>
 
-        <div onClick={toggleModal} className="z-40 cursor-pointer md:hidden">
+        <button
+          onClick={toggleModal}
+          className="z-40 cursor-pointer md:hidden"
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        >
           <img src={hamburger} alt={isOpen ? 'close menu' : 'open menu'} />
-        </div>
+        </button>
 
         {isOpen && (
           <>
@@ -79,28 +83,21 @@ function Header() {
                   aria-label="primary-navigation"
                   className="flex flex-col gap-5 text-dark-blue text-[1.5rem] font-bold py-10"
                 >
-                  <li
-                    className="leading-[1.25]"
-                    onClick={() => setIsOpen(!isOpen)}
-                  >
-                    <NavLink to="/portfolio">Portfolio</NavLink>
-                  </li>
-                  <li
-                    className="leading-[1.25]"
-                    onClick={() => setIsOpen(!isOpen)}
-                  >
-                    <NavLink to="/about">About Us</NavLink>
-                  </li>
-                  <li
-                    className="leading-[1.25]"
-                    onClick={() => setIsOpen(!isOpen)}
-                  >
-                    <NavLink to="/Contact">Contact</NavLink>
-                  </li>
+                  {navbarLinks.map((link, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="leading-[1.25]"
+                        onClick={() => setIsOpen(!isOpen)}
+                      >
+                        <NavLink to={link.route}>{link.title}</NavLink>
+                      </li>
+                    );
+                  })}
                 </ul>
               </nav>
             </div>
-            <div className="fixed top-24 left-0 w-[100vw] h-full bg-black/50 z-20"></div>
+            <div className="fixed top-24 left-0 w-[100vw] h-full bg-black/60 z-20"></div>
           </>
         )}
       </div>

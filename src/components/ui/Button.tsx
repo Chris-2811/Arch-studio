@@ -6,6 +6,7 @@ type ButtonProps = {
   children: any;
   active?: boolean;
   fullWidth?: boolean;
+  onClick?: () => void;
 };
 
 function Button({ to, children, active, fullWidth }: ButtonProps) {

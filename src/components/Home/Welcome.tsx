@@ -21,13 +21,13 @@ function Welcome() {
               to life. Our small team of highly skilled individuals combined
               with our! large network put us in a strong position to deliver
               exceptional results.
-              <br />
-              <br />
+            </p>
+            <p className="text-grey-400 mt-4 font-medium text-lg leading-[1.33] md:max-w-[572px] xl:w-[445px]">
               Over the past 10 years, we have worked on all kinds of projects.
               From stations to high-rise buildings, we create spaces that
               inspire and delight.
-              <br />
-              <br />
+            </p>
+            <p className="text-grey-400 font-medium text-lg leading-[1.33] md:max-w-[572px] xl:w-[445px]">
               We work closely with our clients so that we understand the
               intricacies of each project. This allows us to work in harmony the
               surrounding area to create truly stunning projects that will stand
@@ -36,7 +36,7 @@ function Welcome() {
           </div>
           <img
             src={welcomeImage}
-            alt="welcome"
+            alt="welcome image"
             className="w-[350px] h-[568px] hidden xl:block xl:pb-4 xxl:pb-0 "
           />
         </div>

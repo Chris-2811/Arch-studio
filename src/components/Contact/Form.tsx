@@ -86,9 +86,13 @@ function Form() {
               value={formData.name}
               onChange={handleInputChange}
               className="block text-xl w-full outline-none pl-[2.125rem] placeholder:text-grey-200 text-dark-blue"
+              aria-label="name"
             />
             {errors.name && (
-              <small className="min-w-fit text-red text-lg font-bold tracking-tight">
+              <small
+                className="min-w-fit text-red text-lg font-bold tracking-tight"
+                role="alert"
+              >
                 {errors.name}
               </small>
             )}
@@ -101,9 +105,13 @@ function Form() {
               value={formData.email}
               onChange={handleInputChange}
               className="block text-xl w-full outline-none pl-[2.125rem] placeholder:text-grey-200 text-dark-blue"
+              aria-label="email"
             />
             {errors.email && (
-              <small className="min-w-fit text-red text-lg font-bold tracking-tight">
+              <small
+                className="min-w-fit text-red text-lg font-bold tracking-tight"
+                role="alert"
+              >
                 {errors.email}
               </small>
             )}
@@ -116,9 +124,13 @@ function Form() {
               value={formData.message}
               onChange={handleInputChange}
               className="w-full resize-none  border-b border-dark-blue text-xl outline-none pl-[2.125rem] placeholder:text-grey-200 text-dark-blue  pt-[2.6125rem]"
+              aria-label="textarea"
             ></textarea>
             {errors.message && (
-              <small className="absolute right-0 bottom-4 min-w-fit text-red text-lg font-bold tracking-tight">
+              <small
+                className="absolute right-0 bottom-4 min-w-fit text-red text-lg font-bold tracking-tight"
+                role="alert"
+              >
                 {errors.message}
               </small>
             )}

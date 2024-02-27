@@ -1,9 +1,7 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import logo from '@/assets/logo-light.svg';
 import Button from '../ui/Button';
-import { useNavigate } from 'react-router-dom';
 import { navbarLinks } from '@/constants';
-import { useLocation } from 'react-router-dom';
 
 function Footer() {
   const navigate = useNavigate();

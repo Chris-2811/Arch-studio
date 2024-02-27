@@ -1,37 +1,6 @@
-import jake from '@/assets/about/desktop/avatar-jake.jpg';
-import thompson from '@/assets/about/desktop/avatar-thompson.jpg';
-import jackson from '@/assets/about/desktop/avatar-jackson.jpg';
-import maria from '@/assets/about/desktop/avatar-maria.jpg';
 import linkedIn from '@/assets/icons/icon-linkedin.svg';
 import twitter from '@/assets/icons/icon-twitter.svg';
-import { Link } from 'react-router-dom';
-
-const data = [
-  {
-    imgSrc: jake,
-    imgAlt: 'Jake Richards',
-    title: 'Jake Richards',
-    description: 'Chief Architect',
-  },
-  {
-    imgSrc: thompson,
-    imgAlt: 'Thompson Smith',
-    title: 'Thompson Smith',
-    description: 'Head of Finance',
-  },
-  {
-    imgSrc: jackson,
-    imgAlt: 'Jackson Rourke',
-    title: 'Jackson Rourke',
-    description: 'Lead Designer',
-  },
-  {
-    imgSrc: maria,
-    imgAlt: 'Maria Simpson',
-    title: 'Maria Simpson',
-    description: 'Senior Architect',
-  },
-];
+import { leaders } from '@/constants/leaders';
 
 function Leaders() {
   return (
@@ -41,9 +10,9 @@ function Leaders() {
           The <br /> Leaders
         </h2>
         <div className="grid mt-[3.5rem] gap-20 md:grid-cols-2  md:gap-x-3 md:gap-y-[6.375rem] lg:gap-x-[1.875rem] lg:gap-y-[4rem]  xl:mt-0">
-          {data.map((item) => {
+          {leaders.map((item) => {
             return (
-              <div>
+              <div key={item.id}>
                 <div className="group relative">
                   <img
                     src={item.imgSrc}
@@ -52,16 +21,20 @@ function Leaders() {
                   />
                   <div className="hidden group-hover:grid absolute place-items-center inset-0 bg-transparent group-hover:bg-black/50 transition-all">
                     <div className="flex items-center gap-6">
-                      <Link to="https://www.linkedin.com/">
-                        <img src={linkedIn} alt="linkedIn" />
-                      </Link>
-                      <Link
-                        to="https://twitter.com/?lang=de"
+                      <a
+                        href="https://www.linkedin.com/"
                         target="_blank"
                         rel="noreferrer noopener"
                       >
-                        <img src={twitter} alt="twitter" />
-                      </Link>
+                        <img src={linkedIn} alt="Link to linkedIn" />
+                      </a>
+                      <a
+                        href="https://twitter.com/?lang=de"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <img src={twitter} alt="Link to twitter" />
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import Rectangle from '../ui/Rectangle';
 
 function HeroContact() {
   return (
-    <section className="relative md:myContainer">
+    <section className="relative md:myContainer" role="banner">
       <div className="relative h-240 w-full bg-hero-contact-mobile bg-cover md:bg-hero-contact-tablet md:h-720 lg:bg-hero-contact-desktop xl:max-w-[635px]">
         <div className="bg-white z-10 w-[343px] h-[45px] absolute bottom-0 md:hidden"></div>
         <div className="absolute inset-0 bg-black/40"></div>
