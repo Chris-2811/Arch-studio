@@ -6,9 +6,8 @@ function HeroHome() {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <section className="md:myContainer">
+    <section className="md:myContainer" role="banner">
       <div
-        role="image"
         className={`relative px-8 md:px-[3.6125rem] lg:px-[11.875rem] pt-[7.25rem] xxl:pt-[11rem] h-[560px] md:h-[720px] bg-cover bg-no-repeat ${
           selectedProject.id === 1
             ? 'bg-paramour-mobile md:bg-paramour-tablet lg:bg-paramour-desktop'
