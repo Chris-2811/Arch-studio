@@ -16,6 +16,7 @@ function Featured() {
           {featuredProjects.map((project) => {
             return (
               <FeaturedCard
+                key={project.id}
                 title={project.title}
                 bgImage={project.bgImage}
                 projectNumber={project.projectNumber}

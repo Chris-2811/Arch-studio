@@ -9,7 +9,15 @@ function HeroHome() {
     <section className="md:myContainer">
       <div
         role="image"
-        className={`relative px-8 md:px-[3.6125rem] lg:px-[11.875rem] pt-[7.25rem] xxl:pt-[11rem] bg-${selectedProject.bg}-mobile md:bg-${selectedProject.bg}-tablet lg:bg-${selectedProject.bg}-desktop h-[560px] md:h-[720px] bg-cover bg-no-repeat`}
+        className={`relative px-8 md:px-[3.6125rem] lg:px-[11.875rem] pt-[7.25rem] xxl:pt-[11rem] h-[560px] md:h-[720px] bg-cover bg-no-repeat ${
+          selectedProject.id === 1
+            ? 'bg-paramour-mobile md:bg-paramour-tablet lg:bg-paramour-desktop'
+            : selectedProject.id === 2
+            ? 'bg-seraph-mobile md:bg-seraph-tablet lg:bg-seraph-desktop'
+            : selectedProject.id === 3
+            ? 'bg-federal-mobile md:bg-federal-tablet lg:bg-federal-desktop'
+            : 'bg-trinity-mobile md:bg-trinity-tablet lg:bg-trinity-desktop'
+        }`}
       >
         <div className="absolute inset-0 bg-black/20 "></div>
         <div className="relative text-white z-10">
